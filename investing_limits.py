@@ -12,7 +12,7 @@ while(True):
         with open(pathToInv, "r") as invFile:
             inv = list(csv.DictReader(invFile))
     except FileNotFoundError:
-        print("Budget/Investments file(s) not found. Enter paths of budget.csv and investments.csv again:")
+        print("\n")
     else:
         break
 
