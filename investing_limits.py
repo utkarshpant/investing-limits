@@ -4,15 +4,15 @@ import dateutil.parser as parser
 
 # user inputs - file paths for budget and investments
 while(True):
-    pathToBudget = input("budget.csv:\t")
-    pathToInv = input("investments.csv:\t")
+    pathToBudget = input()
+    pathToInv = input()
     try:
         with open(pathToBudget, 'r') as budgetFile:
             budget = list(csv.DictReader(budgetFile))
         with open(pathToInv, "r") as invFile:
             inv = list(csv.DictReader(invFile))
     except FileNotFoundError:
-        print("Budget/Investments file(s) not found. Enter paths of budget.csv and investments.csv again:")
+        # print("Budget/Investments file(s) not found. Enter paths of budget.csv and investments.csv again:")
     else:
         break
 
